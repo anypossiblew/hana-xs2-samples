@@ -1,5 +1,12 @@
 ---
 applications:
+- name: xs2-node-hw-db
+  path: db
+  memory: 128M
+  no-route: true
+  services:
+    - node-hdi-container
+
 - name: xs2-node-hw
   memory: 100M
   path: web

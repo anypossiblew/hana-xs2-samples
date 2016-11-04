@@ -1,0 +1,14 @@
+{
+  "name": "xs2-node-hw-db",
+  "version": "1.0.0",
+  "description": "DB Application in xs2 Nodejs",
+  "main": "index.js",
+  "scripts": {
+    "start": "node node_modules/sap-hdi-deploy/deploy.js"
+  },
+  "author": "tiven.wang",
+  "license": "ISC",
+  "dependencies": {
+    "sap-hdi-deploy": "2.2.0"
+  }
+}
