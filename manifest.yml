@@ -1,0 +1,6 @@
+---
+applications:
+- name: xs2-node-hw
+  memory: 100M
+  path: web
+  buildpack: sap_nodejs_buildpack
