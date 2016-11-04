@@ -1,0 +1,8 @@
+npm-debug.log
+*.sw[o|p]
+target/
+node_modules
+*.mtar
+node/
+mta-assembly
+settings.xml
