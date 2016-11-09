@@ -1,0 +1,9 @@
+{
+    "hana": {
+        "host"            : "<HANA DB Host>",
+        "port"            : "<HANA DB Port>",
+        "user"            : "<UserName>",
+        "password"        : "<UserPassword>",
+        "schema"          : "<HDI schema>"
+    }
+}

@@ -1,11 +1,12 @@
 'use strict';
 var express = require('express');
+var hdbext = require('sap-hdbext');
 var routes = require('./routes/userinfo');
 
-var PORT = process.env.PORT || 3000;
+var PORT = process.env.PORT || 3001;
 var app = express();
 
-app.use('/', routes);
+app.use('/', hdbext.middleware(), routes);
 
 //start the HTTP server
 app.listen(PORT, function () {

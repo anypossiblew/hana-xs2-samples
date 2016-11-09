@@ -8,7 +8,7 @@ applications:
     - node-hdi-container
 
 - name: xs2-node-hw-backend
-  port: 3001 #the port used for nodejs
+  port: 3002
   path: js
   memory: 128M
   services:

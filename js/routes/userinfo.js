@@ -3,7 +3,7 @@ var router = express.Router();
 var userInfoQuery = require('./userinfoQuery');
 
 router.get('/rest/userinfo', function (req, res) {
-    userInfoQuery(req.user, function(error, result) {
+    userInfoQuery(req.user, req.db, function(error, result) {
         if(error) {
             res.writeHead(500, {'Content-Type': 'application/json'});
             res.end('{}');
