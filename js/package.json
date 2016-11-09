@@ -1,0 +1,16 @@
+{
+  "name": "xs2-node-hw-backend",
+  "version": "1.0.0",
+  "description": "The backend module in XS2 Nodejs Application",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "tiven.wang",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.14.0",
+    "sap-hdbext": "2.0.2"
+  }
+}

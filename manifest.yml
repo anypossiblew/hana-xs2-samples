@@ -7,7 +7,9 @@ applications:
   services:
     - node-hdi-container
 
-- name: xs2-node-hw
-  memory: 100M
-  path: web
-  buildpack: sap_nodejs_buildpack
+- name: xs2-node-hw-backend
+  port: 3001 #the port used for nodejs
+  path: js
+  memory: 128M
+  services:
+    - node-hdi-container
