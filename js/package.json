@@ -10,7 +10,9 @@
   "author": "tiven.wang",
   "license": "ISC",
   "dependencies": {
+    "async": "1.4.2",
     "express": "^4.14.0",
+    "sap-cds": "1.0.8",
     "sap-hdbext": "2.0.2"
   }
 }
