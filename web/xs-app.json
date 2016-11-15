@@ -1,0 +1,19 @@
+{
+  "welcomeFile": "index.html",
+  "authenticationMethod": "none",
+  "routes": [
+    {
+      "source": "/sap/ui5/1(.*)",
+      "target": "$1",
+      "localDir": "sapui5"
+    },
+    {
+      "source": "/rest/.*",
+      "destination": "backend"
+    },
+    {
+      "source": "^/(.*)",
+      "localDir": "resources"
+    }
+  ]
+}

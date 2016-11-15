@@ -1,0 +1,9 @@
+{
+  "PORT": 3003,
+  "destinations": [
+    {
+      "name": "backend",
+      "url": "http://localhost:3001"
+    }
+  ]
+}

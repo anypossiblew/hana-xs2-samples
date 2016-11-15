@@ -8,8 +8,21 @@ applications:
     - node-hdi-container
 
 - name: xs2-node-hw-backend
-  port: 3002
+  port: 3002 #the port used for nodejs
   path: js
   memory: 128M
   services:
     - node-hdi-container
+
+- name: xs2-node-hw
+  port: 3004
+  memory: 100M
+  path: web
+  env:
+    destinations: >
+      [
+        {
+          "name":"backend",
+          "url":"http://localhost:3002"
+        }
+      ]

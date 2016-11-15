@@ -1,0 +1,6 @@
+default-services.json
+npm_debug.log
+node
+target
+etc
+pom.xml
