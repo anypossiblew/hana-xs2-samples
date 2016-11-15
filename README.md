@@ -1,11 +1,13 @@
 # hana-xs2-samples
 
-The project for my blog - [HANA XS2 On-Premise part 6 - Operate CDS entities in HANA from Nodejs](http://tiven.wang/articles/hana-xs2-part6-operate-hana/)
+The project for my blog - [HANA XS2 On-Premise part 7 - Client User Interface of an XS Advanced Application](http://tiven.wang/articles/hana-xs2-part7-client-ui/)
 
 ## Run
 
 Change the configuration in *js/default-services.json*
 
+Change the configuration in *web/default-env.json*
+
 Install the Node.js dependencies
 
-Or you want change the app server port in *manifest.yml*
+Or you want change the app server port and destinations in *manifest.yml*
