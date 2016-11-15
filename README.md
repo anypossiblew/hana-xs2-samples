@@ -10,4 +10,6 @@ Change the configuration in *web/default-env.json*
 
 Install the Node.js dependencies
 
+Install SAPUI5 resources into *web/sapui5*
+
 Or you want change the app server port and destinations in *manifest.yml*
