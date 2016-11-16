@@ -35,7 +35,7 @@ function init(appCallback) {
     }
 }
 
-function testdataDestructor(dbConnection, appCallback) {
+function testdataDestructor(dbConnection, securityContext, appCallback) {
     var conn = null;
     async.waterfall([
         init,
@@ -56,7 +56,11 @@ function testdataDestructor(dbConnection, appCallback) {
           });
         },
         function deleteAllBooks(entities, cb) {
-            conn.$discardAll(entities, cb);
+          if (!securityContext.checkLocalScope('Delete')) {
+              return cb(new Error('Insufficient permissions. You do not have the required Delete scope. '
+                  +'Create a role based on the Editor role template and assign the role to a group which contains your user!'));
+          }
+          conn.$discardAll(entities, cb);
         },
         function release(cb) {
             conn.$close();

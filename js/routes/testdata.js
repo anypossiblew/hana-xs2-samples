@@ -16,7 +16,7 @@ router.get('/rest/addressbook/testdata', function (req, res) {
     });
 });
 router.get('/rest/addressbook/testdataDestructor', function (req, res) {
-    testdataDestructor(req.db, function(error) {
+    testdataDestructor(req.db, req.authInfo, function(error) {
         if (error) {
             res.writeHead(403, {'Content-Type': 'application/json'});
             console.error(error);

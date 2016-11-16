@@ -13,6 +13,7 @@ applications:
   memory: 128M
   services:
     - node-hdi-container
+    - node-uaa
 
 - name: xs2-node-hw
   port: 3004
@@ -23,6 +24,9 @@ applications:
       [
         {
           "name":"backend",
-          "url":"http://localhost:3002"
+          "url":"http://localhost:3002",
+          "forwardAuthToken": true
         }
       ]
+  services:
+    - node-uaa

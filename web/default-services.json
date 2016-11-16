@@ -1,8 +1,10 @@
 {
     "uaa": {
-        "url" : "http://sap-login.cfapps.neo.ondemand.com",
-        "clientid" : "xs2.java",
-        "clientsecret" : "javaclientsecret",
-        "xsappname" : "node-hello-world"
+        "url"             : "<security_url>",
+        "clientid"        : "<client_id>",
+        "clientsecret"    : "<client_secret>",
+        "xsappname"       : "<xs_app_name>",
+        "identityzone"    : "uaa",
+        "verificationkey" : "<verification_key>"
     }
 }

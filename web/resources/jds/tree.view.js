@@ -3,12 +3,12 @@ sap.ui.jsview("jds.tree", {
 	getControllerName : function() {
 		return "jds.tree";
 	},
-	
+
 	createContent : function(oController) {
 		var backendURL = "/rest/addressbook/tree"
 		var oModel = new sap.ui.model.json.JSONModel(backendURL, false);
 		var restErrorMessage = "Something has gone wrong while accessing the REST service at " + backendURL + ". Please check whether the node.js application " +
-		"is up and running. Depending on your runtime either execute 'cf logs node-hello-world-backend --recent' or 'xs logs node-hello-world-backend --recent'."
+		"is up and running. Depending on your runtime either execute 'cf logs <app-name> --recent' or 'xs logs <app-name> --recent'."
 
 		oModel.attachParseError(function(oControlEvent) {
 			alert(restErrorMessage);

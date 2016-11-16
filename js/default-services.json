@@ -1,4 +1,12 @@
 {
+    "uaa": {
+        "url"             : "<security_url>",
+        "clientid"        : "<client_id>",
+        "clientsecret"    : "<client_secret>",
+        "xsappname"       : "<xs_app_name>",
+        "identityzone"    : "uaa",
+        "verificationkey" : "<verification_key>"
+    },
     "hana": {
         "host"            : "<HANA DB Host>",
         "port"            : "<HANA DB Port>",

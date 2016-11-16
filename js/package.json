@@ -13,6 +13,9 @@
     "async": "1.4.2",
     "express": "^4.14.0",
     "sap-cds": "1.0.8",
-    "sap-hdbext": "2.0.2"
+    "sap-hdbext": "2.0.2",
+    "passport": "0.2.1",
+    "sap-xssec": "0.8.0",
+    "sap-xsenv": "1.2.2"
   }
 }

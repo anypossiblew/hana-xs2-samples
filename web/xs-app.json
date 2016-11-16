@@ -1,11 +1,18 @@
 {
   "welcomeFile": "index.html",
-  "authenticationMethod": "none",
+  "logout": {
+    "logoutEndpoint": "/do/logout"
+  },
   "routes": [
     {
       "source": "/sap/ui5/1(.*)",
       "target": "$1",
       "localDir": "sapui5"
+    },
+    {
+      "source": "/rest/addressbook/testdataDestructor",
+      "destination": "backend",
+      "scope": "$XSAPPNAME.Delete"
     },
     {
       "source": "/rest/.*",
