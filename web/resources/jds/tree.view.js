@@ -5,7 +5,7 @@ sap.ui.jsview("jds.tree", {
 	},
 
 	createContent : function(oController) {
-		var backendURL = "/rest/addressbook/tree"
+		var backendURL = "/addressbook/tree.xsjs";
 		var oModel = new sap.ui.model.json.JSONModel(backendURL, false);
 		var restErrorMessage = "Something has gone wrong while accessing the REST service at " + backendURL + ". Please check whether the node.js application " +
 		"is up and running. Depending on your runtime either execute 'cf logs <app-name> --recent' or 'xs logs <app-name> --recent'."
@@ -41,11 +41,11 @@ sap.ui.jsview("jds.tree", {
 			var aData = jQuery.ajax({
 				type : "GET",
 				contentType : "application/json",
-				url : "/rest/addressbook/testdata",
+				url : "/addressbook/testdata.xsjs",
 				dataType : "json",
 				async: false,
 				success : function(data, textStatus, jqXHR) {
-					oModel.loadData("/rest/addressbook/tree");
+					oModel.loadData("/addressbook/tree.xsjs");
 				},
 				statusCode: {
 					401 : function() {
@@ -55,6 +55,7 @@ sap.ui.jsview("jds.tree", {
 			});
 		}
 	});
+
 	// button to delete all data
 	var oDeleteBtn = new sap.ui.commons.Button({text: "Delete All Data (requires authorization)",
 	press: function() {
@@ -65,7 +66,7 @@ sap.ui.jsview("jds.tree", {
 			dataType : "json",
 			async: false,
 			success : function(data, textStatus, jqXHR) {
-				oModel.loadData("/rest/addressbook/tree");
+				oModel.loadData("/addressbook/tree.xsjs");
 			},
 			statusCode: {
 				401 : function() {

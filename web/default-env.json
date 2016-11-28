@@ -5,6 +5,11 @@
       "name": "backend",
       "url": "http://localhost:3001",
       "forwardAuthToken": true
+    },
+    {
+      "name":"xsjs",
+      "url":"http://localhost:3005",
+      "forwardAuthToken": true
     }
   ]
 }

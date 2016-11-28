@@ -1,0 +1,18 @@
+{
+  "name": "xs2-node-hw-xsjs",
+  "description": "XSJS application in XS2 Node.js application",
+  "version": "1.0.0",
+  "repository": {
+    "url": "https://github.com/anypossiblew/hana-xs2-samples"
+  },
+  "dependencies": {
+    "sap-xsenv": "1.2.2",
+    "sap-xsjs": "1.11.2"
+  },
+  "engines": {
+    "node": ">=0.10.x"
+  },
+  "scripts": {
+    "start": "node --max-old-space-size=400 --expose-gc main.js"
+  }
+}

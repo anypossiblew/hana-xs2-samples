@@ -15,8 +15,8 @@
       "scope": "$XSAPPNAME.Delete"
     },
     {
-      "source": "/rest/.*",
-      "destination": "backend"
+      "source": ".*\\.xsjs",
+      "destination": "xsjs"
     },
     {
       "source": "^/(.*)",

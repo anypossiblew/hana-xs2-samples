@@ -5,7 +5,7 @@ sap.ui.jsview("user.info", {
 	},
 
 	createContent : function(oController) {
-		var backendURL = "/rest/userinfo"
+		var backendURL = "/addressbook/userinfo.xsjs";
 		var oModel = new sap.ui.model.json.JSONModel(backendURL, false)
 		var restErrorMessage = "Something has gone wrong while accessing the REST service at " + backendURL + ". Please check whether the node.js application " +
 		"is up and running. Depending on your runtime either execute 'cf logs <app-name> --recent' or 'xs logs <app-name> --recent'."
@@ -23,7 +23,7 @@ sap.ui.jsview("user.info", {
 			}
 		})
 		sap.ui.getCore().setModel(oModel)
-		oModel.loadData("/rest/userinfo")
+		oModel.loadData("/addressbook/userinfo.xsjs")
 
 		var oLayout = new sap.ui.commons.layout.MatrixLayout({
 			id : "matrixLayout",
@@ -43,7 +43,7 @@ sap.ui.jsview("user.info", {
 			design : sap.ui.commons.LabelDesign.Bold
 		})
 		userNameValue = new sap.ui.commons.TextView({
-			text : "{/user/id}"
+			text : "{/user/logonName}"
 		})
 		firstNameLabel = new sap.ui.commons.Label({
 			text : 'First name',
@@ -57,7 +57,7 @@ sap.ui.jsview("user.info", {
 			design : sap.ui.commons.LabelDesign.Bold
 		})
 		lastNameValue = new sap.ui.commons.TextView({
-			text : "{/user/name/familyName}"
+			text : "{/user/name/lastName}"
 		})
 		oLayoutJwt.createRow(userNameLabel, userNameValue)
 		oLayoutJwt.createRow(firstNameLabel, firstNameValue)

@@ -1,7 +1,7 @@
 {
   "name": "xs2-node-hw-web",
   "version": "1.0.0",
-  "description": "",
+  "description": "Web application in XS2 Node.js application",
   "scripts": {
     "start": "node node_modules/approuter/approuter.js"
   },
